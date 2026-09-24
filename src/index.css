@@ -1,0 +1,357 @@
+:root {
+  font-family:
+    Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  color: #172033;
+  background: #f4f6f9;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* =========================================
+   Application
+   ========================================= */
+
+.app-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.app-header {
+  margin-bottom: 28px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #172033;
+}
+
+.app-header p {
+  margin: 8px 0 0;
+  color: #697386;
+  font-size: 15px;
+}
+
+/* =========================================
+   Main workspace
+   ========================================= */
+
+.signature-workspace {
+  display: grid;
+  grid-template-columns: minmax(340px, 0.85fr) minmax(480px, 1.15fr);
+  gap: 24px;
+  align-items: start;
+}
+
+/* =========================================
+   Panels
+   ========================================= */
+
+.signature-panel {
+  background: #ffffff;
+  border: 1px solid #e4e8ef;
+  border-radius: 16px;
+  box-shadow:
+    0 1px 2px rgba(16, 24, 40, 0.03),
+    0 8px 30px rgba(16, 24, 40, 0.05);
+}
+
+.signature-panel-header {
+  padding: 22px 24px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.signature-panel-header h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 650;
+  color: #172033;
+}
+
+.signature-panel-header p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #7a8495;
+}
+
+.signature-panel-body {
+  padding: 24px;
+}
+
+/* =========================================
+   Form
+   ========================================= */
+
+.signature-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #344054;
+}
+
+.form-group input {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+
+  border: 1px solid #d7dce5;
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #ffffff;
+  color: #172033;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.form-group input::placeholder {
+  color: #a0a8b6;
+}
+
+.form-group input:hover {
+  border-color: #b9c1ce;
+}
+
+.form-group input:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+/* =========================================
+   Preview
+   ========================================= */
+
+.signature-preview {
+  min-width: 0;
+}
+
+.signature-preview-container {
+  padding: 24px;
+}
+
+.signature-preview-stage {
+  min-height: 460px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  background:
+    linear-gradient(
+      45deg,
+      #f7f8fa 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      -45deg,
+      #f7f8fa 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 75%,
+      #f7f8fa 75%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 75%,
+      #f7f8fa 75%
+    );
+
+  background-size: 20px 20px;
+  background-position:
+    0 0,
+    0 10px,
+    10px -10px,
+    -10px 0;
+
+  border: 1px solid #e4e8ef;
+  border-radius: 12px;
+}
+
+/* =========================================
+   Signature card
+   ========================================= */
+
+.signature-card {
+  width: 100%;
+  max-width: 620px;
+
+  padding: 26px;
+
+  background: #ffffff;
+  border: 1px solid #e3e7ed;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 6px 20px rgba(16, 24, 40, 0.08);
+}
+
+.signature-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.signature-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.signature-identity strong {
+  font-size: 18px;
+  font-weight: 700;
+  color: #172033;
+}
+
+.signature-identity span {
+  font-size: 13px;
+  color: #667085;
+}
+
+.signature-institution {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+
+  padding-left: 28px;
+  border-left: 1px solid #e4e8ef;
+}
+
+.signature-institution strong {
+  font-size: 18px;
+  font-weight: 750;
+  color: #2563eb;
+}
+
+.signature-institution span {
+  font-size: 11px;
+  color: #7a8495;
+  text-align: right;
+}
+
+/* =========================================
+   Responsive
+   ========================================= */
+
+@media (max-width: 900px) {
+  .signature-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .signature-preview-stage {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    width: min(100% - 24px, 1180px);
+    padding: 28px 0;
+  }
+
+  .app-header h1 {
+    font-size: 25px;
+  }
+
+  .signature-panel-header,
+  .signature-panel-body,
+  .signature-preview-container {
+    padding: 18px;
+  }
+
+  .signature-preview-stage {
+    padding: 20px;
+  }
+
+  .signature-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .signature-institution {
+    align-items: flex-start;
+
+    padding-left: 0;
+    padding-top: 18px;
+
+    border-left: 0;
+    border-top: 1px solid #e4e8ef;
+    width: 100%;
+  }
+
+  .signature-institution span {
+    text-align: left;
+  }
+}
